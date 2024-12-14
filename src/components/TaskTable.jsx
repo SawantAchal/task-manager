@@ -29,10 +29,10 @@ const TaskTable = () => {
             formatter: (cell) => (cell.getValue() ? "Done" : "To Do"),
           },
           {
-            title: "Actions",
+            title: "Delete",
             formatter: "html",
             headerSort: false,
-            formatter: () => '<button class="delete-button">Delete</button>',
+            formatter: "buttonCross",
             cellClick: (e, cell) => deleteTask(cell.getRow().getData().id),
           },
         ],
