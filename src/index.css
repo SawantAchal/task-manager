@@ -4,3 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.tabulator {
+    @apply bg-white text-gray-700 rounded-lg;
+  }
+  
+  .tabulator-header {
+    @apply bg-red-700 text-white text-center text-xs font-bold uppercase tracking-wide border-b border-red-600;
+  }
+  
+  .tabulator-row {
+    @apply text-gray-800 bg-gray-100;
+  }
+  
+  .tabulator-row:nth-child(even) {
+    @apply bg-gray-50;
+  }
+  
+  .tabulator-row:hover {
+    @apply bg-red-600 text-white;
+  }
+  
+  .tabulator-cell {
+    @apply px-4 py-2 text-sm border border-red-400;
+  }
+  
+  .tabulator-cell > button.delete-button {
+    @apply transition-all duration-200 ease-in-out font-semibold hover:text-red-800;
+  }
+  
