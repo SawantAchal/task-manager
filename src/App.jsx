@@ -17,11 +17,11 @@ function App() {
       <div className="p-4">
         <div className="bg-gray-800 text-white p-4 rounded-md flex flex-col sm:flex-row justify-between items-center mb-4 shadow-md">
           <TaskFilter />
+          <TaskCounter />
           <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300 w-full sm:w-auto mt-4 sm:mt-0" onClick={() => setShowModal(true)}>
             Add Task
           </button>
         </div>
-        <TaskCounter />
         <TaskTable />
         <TaskFormModel showModal={showModal} setShowModal={setShowModal} />
       </div>

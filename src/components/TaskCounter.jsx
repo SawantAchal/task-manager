@@ -9,20 +9,20 @@ const TaskCounter = () => {
   }
 
   return (
-    <div className="task-counter bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
-      <h2 className="text-2xl font-semibold mb-4">Task Overview</h2>
-      <div className="flex flex-col sm:flex-row justify-between mb-4 gap-4">
-        <div className="task-item flex-1 p-4 bg-blue-500 rounded-lg text-center">
-          <h3 className="text-xl font-medium">Total Tasks</h3>
-          <p className="text-2xl font-bold">{taskCounts.allTasks}</p>
+     <div className="task-counter bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 text-white p-6 rounded-lg shadow-2xl max-w-4xl mx-auto">
+      <h2 className="text-3xl font-extrabold mb-6 text-center underline decoration-blue-500 decoration-4">Task Overview</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="task-item flex flex-col items-center bg-blue-600 hover:bg-blue-700 transition duration-300 p-6 rounded-xl shadow-lg">
+          <h3 className="text-xl font-medium uppercase tracking-wide mb-2">Total Tasks</h3>
+          <p className="text-4xl font-extrabold">{taskCounts.allTasks}</p>
         </div>
-        <div className="task-item flex-1 p-4 bg-yellow-500 rounded-lg text-center">
-          <h3 className="text-xl font-medium">To Do</h3>
-          <p className="text-2xl font-bold">{taskCounts.toDoTasks}</p>
+        <div className="task-item flex flex-col items-center bg-yellow-500 hover:bg-yellow-600 transition duration-300 p-6 rounded-xl shadow-lg">
+          <h3 className="text-xl font-medium uppercase tracking-wide mb-2">To Do</h3>
+          <p className="text-4xl font-extrabold">{taskCounts.toDoTasks}</p>
         </div>
-        <div className="task-item flex-1 p-4 bg-green-500 rounded-lg text-center">
-          <h3 className="text-xl font-medium">Done</h3>
-          <p className="text-2xl font-bold">{taskCounts.doneTasks}</p>
+        <div className="task-item flex flex-col items-center bg-green-500 hover:bg-green-600 transition duration-300 p-6 rounded-xl shadow-lg">
+          <h3 className="text-xl font-medium uppercase tracking-wide mb-2">Done</h3>
+          <p className="text-4xl font-extrabold">{taskCounts.doneTasks}</p>
         </div>
       </div>
     </div>

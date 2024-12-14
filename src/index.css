@@ -5,30 +5,39 @@
 @tailwind utilities;
 
 .tabulator {
-    @apply bg-white text-gray-700 rounded-lg;
+  @apply bg-white text-gray-800 rounded-lg shadow-lg overflow-hidden;
+}
+
+.tabulator-header {
+  @apply bg-gray-900 text-white text-center text-xs font-bold uppercase tracking-wider border-b border-gray-800;
+}
+
+.tabulator-row {
+  @apply text-sm bg-gray-50 hover:bg-gray-200 transition duration-300 ease-in-out;
+}
+
+.tabulator-row:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.tabulator-cell {
+  @apply p-4 text-left border border-gray-200;
+}
+
+.tabulator-cell > button {
+  @apply text-red-600 font-semibold hover:text-red-800 transition ease-in duration-200;
+}
+
+.table-container {
+  @apply p-4 bg-gray-100 rounded-lg shadow-lg border border-gray-200;
+}
+
+@media (max-width: 768px) {
+  .tabulator {
+    @apply text-xs;
   }
-  
-  .tabulator-header {
-    @apply bg-red-700 text-white text-center text-xs font-bold uppercase tracking-wide border-b border-red-600;
-  }
-  
-  .tabulator-row {
-    @apply text-gray-800 bg-gray-100;
-  }
-  
-  .tabulator-row:nth-child(even) {
-    @apply bg-gray-50;
-  }
-  
-  .tabulator-row:hover {
-    @apply bg-red-600 text-white;
-  }
-  
+
   .tabulator-cell {
-    @apply px-4 py-2 text-sm border border-red-400;
+    @apply px-2 py-1;
   }
-  
-  .tabulator-cell > button.delete-button {
-    @apply transition-all duration-200 ease-in-out font-semibold hover:text-red-800;
-  }
-  
+}
